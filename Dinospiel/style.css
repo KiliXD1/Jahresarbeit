@@ -1,0 +1,61 @@
+*{
+padding: 0;
+margin: 0;
+}
+ #game{
+width: 1450px;
+height: 650px;
+background-color: rgb(85, 235, 235);
+border: 2px solid black;
+border-bottom: 70px solid green;
+}
+#character{
+width: 60px;
+height: 130px;
+left: 30px;
+background-color: rgb(105, 27, 27);
+position: relative;
+top: 520px;}
+.animate{
+animation: jump 1s;
+}
+
+
+@keyframes jump{
+0%{top: 500px;}
+30%{top: 250px;}
+70%{top: 250px;}
+100%{top: 500px;}
+}
+#block{
+width: 30px;
+height: 75px;
+background-color: rgb(0, 0, 0);
+position: relative;
+top: 445px;
+left: 480px;
+animation: block 2s infinite linear;
+}
+@keyframes block{
+0%{left: 480px;}
+100%{left: 40px;}
+}
+
+
+DIES HIER UNTEN IST EINE TESTVERSION EINES ZWEITEN BLOCKS
+
+
+
+#block{
+    width: 20px;
+    height: 370px;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    top: 150px;
+    left: 480px;
+    animation: block 2s infinite linear;
+    }
+    @keyframes block{
+    0%{left: 480px;}
+    100%{left: -40px;}
+    }

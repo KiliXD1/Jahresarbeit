@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake</title>
+</head>
+<body>
+
+<canvas id="canvas" width="480" height="480"></canvas>
+
+    <script>
+        let canvas = document.getElementById("canvas");
+        let ctx = canvas.getContext("2d");
+        let rows = 20;
+        let cols = 20;
+
+        //Snake
+
+        let snake = [{
+            x: 19,
+            y: 5
+        }];
+
+        //Food
+
+        let food;
+
+        let cellWidth = canvas.width / cols;
+        let cellHeight = canvas.height / rows;
+        direction = "LEFT";
+
+        
+
+        setInterval(gameLoop, 300);
+        document.addEventListener("keydown", keyDown);
+
+        draw();
+        placeFood();
+        
+
+        //Snake/Background
+
+        function draw(){
+             ctx.fillStyle = "black";
+             ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "lightgreen";
+            
+            snake.forEach(part => add(part.x, part.y));
+
+
+            //Food
+
+            ctx.fillStyle = "red";
+        add(food.x, food.y);
+       
+        }
+        requestAnimationFrame(draw);
+        function placeFood() {
+                let randomX = Math.floor(Math.random() * cols);
+                let randomY = Math.floor(Math.random() * rows);
+                food = {
+                    x: randomX,
+                    y: randomY
+                };
+            }
+
+
+
+
+        function add(x, y){
+            ctx.fillRect(x * cellWidth, y * cellHeight, cellWidth -1, cellHeight -1);
+        }
+        function gameLoop(){
+            if(direction == "LEFT"){
+            snake[0].x--;
+            }
+            if(direction == "UP"){
+            snake[0].y--;
+            }
+            if(direction == "RIGHT"){
+            snake[0].x++;
+            }
+            if(direction == "DOWN"){
+            snake[0].y++;
+            }
+        }
+        function keyDown(e) {
+            if(e.keyCode == 37){
+                direction = "LEFT";
+            }
+            if(e.keyCode == 38){
+                direction = "UP";
+            }
+            if(e.keyCode == 39){
+                direction = "RIGHT";
+            }
+            if(e.keyCode == 40){
+                direction = "DOWN";
+            }
+        }
+        
+    </script>
+</body>
+</html>
