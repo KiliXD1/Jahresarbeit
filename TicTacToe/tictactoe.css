@@ -65,7 +65,7 @@ border-top: none;
 }
 
 .feld.spieler::before,
-.spielanzeige.spieler ~ .spielfeld .feld:not([disabled]):hover::before {
+.spielanzeige.spieler ~ .spielfeld .feld:not([disablet]):hover::before {
     border: 1rem solid var(--spieler-farbe);
     border-radius: 50%;
     width: 100%;
@@ -73,9 +73,7 @@ border-top: none;
 }
 
 .feld.gegner::before,
-.feld.gegner::after,
-.spielanzeige.gegner ~ .spielfeld .feld:not([disabled]):hover::before, 
-.spielanzeige.gegner ~ .spielfeld .feld:not([disabled]):hover::after
+.feld.gegner::after
 {
     background-color: var(--gegner-farbe);
     width: 1rem;
@@ -106,10 +104,5 @@ border-top: none;
     opacity: 0.3;
 }
 
-.spielanzeige.gegner ~ .spielfeld .feld:not([disabled]):hover::before {
-    opacity: 0.3;
-}
 
-.spielanzeige.gegner ~ .spielfeld .feld:not([disabled]):hover::after {
-    opacity: 0.3;
-}
+
