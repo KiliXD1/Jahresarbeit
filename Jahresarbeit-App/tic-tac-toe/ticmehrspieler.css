@@ -1,6 +1,6 @@
 :root {
-    --spieler-farbe: #1dc9b8;
-    --gegner-farbe: #b51540;
+    --spieler-farbe: #0194b9;
+    --gegner-farbe: #f02626;
     
 }
 
@@ -8,17 +8,18 @@
 * {
     font-family: "Arial", "Helvetica", "sans serif";
 } 
-body {
+body {   
     margin: 0;
     display: flex; 
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: clamp(1rem, 10vh, 4rem);
-    background-color: orange;
+    background-color: rgb(162, 161, 159);
 }
 
-.spielanzeige {
+.spielanzeige,
+.overlay-text {
     font-size: clamp(2rem, 10vh, 4rem);
     font-weight: 900;
     text-align: center;
@@ -27,12 +28,10 @@ body {
 .spielfeld{
     width: 1000px;
     aspect-ratio: 1 / 1;
-    max-width: 50%;
-    max-height: 25vh;
+    max-width: 90%;
+    max-height: 50vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center;
-    align-items: center;
 }
 
 .feld{
@@ -64,8 +63,7 @@ border-top: none;
     box-sizing: border-box;
 }
 
-.feld.spieler::before,
-.spielanzeige.spieler ~ .spielfeld .feld:not([disablet]):hover::before {
+.feld.spieler::before {
     border: 1rem solid var(--spieler-farbe);
     border-radius: 50%;
     width: 100%;
@@ -88,21 +86,50 @@ border-top: none;
     transform: translateX(-50%) rotate(-45deg);
 }
 
-.spielanzeige.spieler {
+.spielanzeige.spieler,
+.overlay-text.spieler {
     color: var(--spieler-farbe);
 }
 
-.spielanzeige.gegner {
+.spielanzeige.gegner,
+.overlay-text.gegner{
     color: var(--gegner-farbe);
 }
 
-.feld:not([disabled]) {
+.spielanzeige.spieler ~ .spielfeld .feld:not([disabled]) {
     cursor: pointer;
 }
 
-.spielanzeige.spieler ~ .spielfeld .feld:not([disabled]):hover::before {
-    opacity: 0.3;
+.overlay {
+    background-color: rgba(0, 0, 0, 0.98);
+    position: fixed;
+    inset: 0;
+    color: #c9cc00;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(1rem, 2vh, 4rem);
+    opacity: 0;
+    pointer-events: none;
 }
 
+.overlay-button {
+    font-size: 2rem;
+    font-weight: 600;
+    background-color: #00ff00;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 2rem/50%;
+    cursor: pointer;
+}
 
+.overlay-button:hover {
+    background-color: #00e600;
+}
 
+.overlay.sichtbar {
+    opacity: 1;
+    pointer-events: all;
+    transition: opacity 1.5;
+}
