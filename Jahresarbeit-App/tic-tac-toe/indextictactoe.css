@@ -9,6 +9,7 @@ body {
     align-items: center;
     gap: clamp(2rem, 10vh, 4rem);
     background-color: rgb(157, 142, 172);
+    background-image: url(images/Pixelninja);
 }
 
 .button-einzelspieler {
@@ -22,7 +23,22 @@ body {
     cursor: crosshair;
     color: black;
     gap: clamp (2rem, 10vh, 4rem);
+    text-decoration: none;
 
+}
+
+.button-mehrspieler {
+    background-color: rgb(162, 161, 159);
+    padding: 0.5em 1em;
+    border-radius: 2rem/50%;
+    font-size: 2rem;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    cursor: crosshair;
+    color: black;
+    gap: clamp (2rem, 10vh, 4rem);
+    text-decoration: none;
 }
 
 .überschrift {

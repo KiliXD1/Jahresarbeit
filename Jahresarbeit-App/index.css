@@ -9,13 +9,13 @@ body {
     justify-content: center;
     align-items: center;
     gap: clamp(1rem, 10vh, 4rem);
-    background-color: rgb(162, 161, 159);
+    background: gold linear-gradient(to bottom, rgb(197, 160, 230), rgb(148, 82, 183));
 }
 
 .tic-tac-toe-button {
-    color: rgb(0, 0, 0);
-    justify-content: center;
-    align-items: center;
+  color: rgb(0, 0, 0);
+  justify-content: center;
+  align-items: center;
   gap: clamp(6rem, 10vh, 10rem);
   cursor: crosshair;
   font-size: 2rem;
@@ -40,5 +40,6 @@ body {
 }
 
 .ueberschrift {
-    font-weight: 600;
+        font-weight: 600;
+        height:20px;
 }

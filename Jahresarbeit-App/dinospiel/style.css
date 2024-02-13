@@ -2,20 +2,25 @@
 padding: 0;
 margin: 0;
 }
+
  #game{
-width: 1450px;
+width: 1000px;
 height: 650px;
-background-color: rgb(85, 235, 235);
+background-color: rgb(96, 222, 222);
 border: 2px solid black;
 border-bottom: 70px solid green;
 }
-#character{
+
+#character { 
+background-image: url("images/Pixelninja.png");
 width: 60px;
 height: 130px;
 left: 30px;
-background-color: rgb(105, 27, 27);
 position: relative;
-top: 520px;}
+top: 520px;
+background-color: rgb(8, 25, 98)
+}
+
 .animate{
 animation: jump 1s;
 }
@@ -27,6 +32,7 @@ animation: jump 1s;
 70%{top: 250px;}
 100%{top: 500px;}
 }
+
 #block{
 width: 30px;
 height: 75px;
@@ -36,6 +42,7 @@ top: 445px;
 left: 480px;
 animation: block 2s infinite linear;
 }
+
 @keyframes block{
 0%{left: 480px;}
 100%{left: 40px;}
