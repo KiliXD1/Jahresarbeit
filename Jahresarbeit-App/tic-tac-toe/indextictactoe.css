@@ -3,17 +3,16 @@
 } 
 body {   
     margin: 0;
-    display: flex; 
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: clamp(2rem, 10vh, 4rem);
-    background-color: rgb(157, 142, 172);
-    background-image: url(images/Pixelninja);
+    gap: clamp(1rem, 10vh, 4rem);
+    background-color: blue;
 }
 
 .button-einzelspieler {
-    background-color: rgb(162, 161, 159);
+    background: linear-gradient( to left, green, blue);
     padding: 0.5em 1em;
     border-radius: 2rem/50%;
     font-size: 2rem;
@@ -28,7 +27,7 @@ body {
 }
 
 .button-mehrspieler {
-    background-color: rgb(162, 161, 159);
+    background: linear-gradient( to right, green, blue);
     padding: 0.5em 1em;
     border-radius: 2rem/50%;
     font-size: 2rem;

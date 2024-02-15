@@ -1,5 +1,5 @@
 :root {
-    --spieler-farbe: #590089;
+    --spieler-farbe: #2782eb;
     --gegner-farbe: #cc0058;
     
 }
@@ -65,7 +65,7 @@ border-top: none;
 
 .feld.spieler::before,
 .spielanzeige.spieler ~ .spielfeld .feld:not([disabled]):hover::before {
-    border: 1rem solid var(--spieler-farbe);
+    border: 4rem solid var(--spieler-farbe);
     border-radius: 50%;
     width: 100%;
     height: 100%;
@@ -75,7 +75,7 @@ border-top: none;
 .feld.gegner::after
 {
     background-color: var(--gegner-farbe);
-    width: 1rem;
+    width: 4rem;
     height: 100%;
 }
 

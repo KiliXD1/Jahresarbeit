@@ -7,6 +7,10 @@ const OVERLAY_KLASSE = "overlay";
 const OVERLAY_TEXT_KLASSE = "overlay-text";
 const OVERLAY_BUTTON_KLASSE = "overlay-button";
 const SICHTBAR_KLASSE = "sichtbar";
+const SPIELER1G_KLASSE = "Erik gewinnt!";
+const SPIELER2G_KLASSE = "Momo gewinnt!";
+const SPIELER1A_KLASSE = "Erik ist dran";
+const SPIELER2A_KLASSE = "Momo ist dran";
 
 const spielfeld = document.querySelector("." + SPIELFELD_KLASSE);
 const spielanzeige = document.querySelector("." + SPIELANZEIGE_KLASSE);
@@ -126,9 +130,9 @@ function spielsteinSetzen(feld) {
 
         // Die Klasse aktualisieren, je nachdem wer gerade am Zug ist
         if (aktuelleKlasse === SPIELER_KLASSE) {
-            spielanzeige.innerText = "Blau ist am Zug.";
+            spielanzeige.innerText = SPIELER1A_KLASSE;
         } else {
-            spielanzeige.innerText = "Rot ist am Zug.";
+            spielanzeige.innerText = SPIELER2A_KLASSE;
         }
 
         // Die Klasse des Spielers, der gerade am Zug ist an die Spielanzeige hängen
@@ -159,16 +163,18 @@ function spielsteinSetzen(feld) {
             overlayText.innerText = "Unentschieden!"
         }
           else if (aktuelleKlasse === SPIELER_KLASSE) {
-          overlayText.innerText = "Blau gewinnt!";
+          overlayText.innerText = "Du hast gewonnen!";
           overlayText.classList.add(SPIELER_KLASSE);
         } else {
-          overlayText.innerText = "Rot gewinnt!";
+          overlayText.innerText = "Du hast verloren!";
           overlayText.classList.add(GEGNER_KLASSE);
         }
 
         // Das Overlay sichtbar machen
         overlay.classList.add(SICHTBAR_KLASSE);
     }
+    
+
 
     function unentschiedenPruefen() {
         // Gehe alle Felder durch

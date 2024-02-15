@@ -1,15 +1,21 @@
 * {
     font-family: "Arial", "Helvetica", "sans serif";
 } 
-
+html {
+    height: 100%;
+}
 body {   
+    height: 100%;
     margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     display: flex; 
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: clamp(1rem, 10vh, 4rem);
-    background: gold linear-gradient(to bottom, rgb(197, 160, 230), rgb(148, 82, 183));
+    gap: clamp(4rem, 10vh, 8rem);
+    inset: 0;
+    background: linear-gradient( to bottom, rgb(51, 186, 14), rgb(181, 16, 36))
 }
 
 .tic-tac-toe-button {
@@ -20,7 +26,7 @@ body {
   cursor: crosshair;
   font-size: 2rem;
   font-weight: 600;
-  background-color: #6666a9;
+  background-color: rgb(181, 16, 36);
   border-radius: 2rem/50%;
   border: none;
   padding: 0.5em 1em;
