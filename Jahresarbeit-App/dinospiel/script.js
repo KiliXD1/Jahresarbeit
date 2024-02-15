@@ -28,8 +28,9 @@ var checkDead = setInterval(function(){
 var characterTop =parseInt(window.getComputedStyle(character).getPropertyValue("Top"));
 var blockLeft =parseInt(window.getComputedStyle(block).getPropertyValue("left"));
 if(blockLeft<91 && blockLeft>0 && characterTop>=300){
-   //block.style.animation = "none";
-   //block.style.display = "none";
+   block.style.animation = "none";
+   block.style.display = "none";
+   alert("Du hast verloren!!!")
 
    spielBeenden();
 }
