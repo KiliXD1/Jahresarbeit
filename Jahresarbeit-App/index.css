@@ -7,8 +7,6 @@ html {
 body {   
     height: 100%;
     margin: 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     display: flex; 
     flex-direction: column;
     justify-content: center;
@@ -23,7 +21,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: clamp(6rem, 10vh, 10rem);
-  cursor: crosshair;
+  cursor: pointer;
   font-size: 2rem;
   font-weight: 600;
   background-color: rgb(181, 16, 36);
@@ -31,7 +29,6 @@ body {
   border: none;
   padding: 0.5em 1em;
   text-decoration: none;
-
 }
 
 .dinospiel-button {

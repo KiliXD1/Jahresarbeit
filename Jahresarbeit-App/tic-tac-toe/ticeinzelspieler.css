@@ -1,15 +1,21 @@
 :root {
-    --spieler-farbe: #ad0e0e;
-    --gegner-farbe: #cc0058;
+    --spieler-farbe: #0ea0ad;
+    --gegner-farbe: #cc0000;
     
 }
 
 
 * {
     font-family: "Arial", "Helvetica", "sans serif";
-} 
+}
+
+html {
+height: 100%;
+}
+
 body {   
     margin: 0;
+    height: 100%;
     display: flex; 
     flex-direction: column;
     justify-content: center;
