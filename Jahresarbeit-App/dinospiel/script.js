@@ -10,18 +10,21 @@ const overlayButton = document.querySelector("." + OVERLAY_BUTTON_KLASSE);
 var character =
 document.getElementById("character");
 var block = document.getElementById("block");
+
+function spielBeenden() {
+   if (checkDead === true) {
+      overlay.classList.add(SICHTBAR_KLASSE);   
+   }
+}
+
 function jump(){
 character.classList.add("animate");
-   if(character.classList !="animate"){
+   if(character.classList ="animate"){
     character.classList.add("animate");
    }
    setTimeout(function () {
    character.classList.remove("animate");
-   },850)
-}
-
-function spielBeenden() {
-   overlay.classList.add(SICHTBAR_KLASSE);
+   }, 850)
 }
 
 var checkDead = setInterval(function(){

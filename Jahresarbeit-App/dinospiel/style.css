@@ -3,27 +3,30 @@ padding: 0;
 margin: 0;
 }
 
- #game{
-width: 1000px;
-height: 650px;
-background-color: rgb(72, 254, 254);
-border: 2px solid black;
-border-bottom: 70px solid green;
+#game{
+width: 1536px;
+height: 864px;
+background-image: url(../images/hintergrund3-modified.jpg);
 }
 
 #character { 
-width: 60px;
-height: 130px;
-left: 30px;
+width: 250px;
+height: 279px;
+left: 70px;
 position: relative;
-top: 520px;
-background-color: rgb(102, 82, 10)
+top: 500px;
+background-image: url(../images/dinobild-modified-modified.png);
 }
 
 .animate{
-animation: jump 1s;
+animation: jump 2s;
 }
 
+.overlay.sichtbar {
+    opacity: 1;
+    pointer-events: all;
+    transition: opacity 1.5;
+}
 
 @keyframes jump{
 0%{top: 500px;}
@@ -38,18 +41,18 @@ animation: jump 1s;
 }
 
 #block{
-width: 30px;
-height: 75px;
-background-color: rgb(0, 0, 0);
+width: 100px;
+height: 152px;
+background-image: url(../images/kaktus2-modified-modified.png);
 position: relative;
-top: 445px;
-left: 480px;
-animation: block 2s infinite linear;
+top: 345px;
+left: 370px;
+animation: block 3s infinite linear;
 }
 
 @keyframes block{
-0%{left: 480px;}
-100%{left: 40px;}
+0%{left: 1450px;}
+100%{left: 0px;}
 }
 
 .overlay-text {
