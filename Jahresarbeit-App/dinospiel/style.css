@@ -4,17 +4,17 @@ margin: 0;
 }
 
 #game{
-width: 1536px;
+width: 100%;
 height: 864px;
 background-image: url(../images/hintergrund3-modified.jpg);
 }
 
 #character { 
-width: 250px;
-height: 279px;
+width: 235px;
+height: 263px;
 left: 70px;
 position: relative;
-top: 500px;
+top: 560px;
 background-image: url(../images/dinobild-modified-modified.png);
 }
 
@@ -41,11 +41,11 @@ animation: jump 2s;
 }
 
 #block{
-width: 100px;
-height: 152px;
+width: 94px;
+height: 147px;
 background-image: url(../images/kaktus2-modified-modified.png);
 position: relative;
-top: 345px;
+top: 413px;
 left: 370px;
 animation: block 3s infinite linear;
 }
@@ -55,22 +55,13 @@ animation: block 3s infinite linear;
 100%{left: 0px;}
 }
 
-.overlay-text {
-    font-size: clamp(2rem, 10vh, 4rem);
-    font-weight: 900;
-    text-align: center;
-}
+#dino-alert {
+    position: absolute;
+color: #aa0909;
+    width: 100%;
+    height: 5%;
+text-align: center;
+padding-top:2%;
+vertical-align:middle;
 
-.overlay {
-    background: linear-gradient(to bottom, gold, rgb(133, 129, 20));
-    position: fixed;
-    inset: 0;
-    color: #000000;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: clamp(1rem, 2vh, 4rem);
-    opacity: 0;
-    pointer-events: none;
 }
